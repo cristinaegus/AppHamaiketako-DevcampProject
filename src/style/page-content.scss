@@ -1,0 +1,61 @@
+// how to put content in grid
+
+.pagecontent {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  font-family: "Tilt Neon", sans-serif;
+}
+  .img i {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: right;
+    align-items: right;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 50px;
+    height: 45px;
+
+
+    
+  }
+  .Title {
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 40px;
+    color: $teal;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;  
+
+    &:hover {
+      color: $dark-teal;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 30px;
+    align-content:justify;
+  } 
+.fototitulo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;    
+}
+.p{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  margin-right: 10px;
+  font-size: medium; 
+  font-family: "Tilt Neon", sans-serif;
+  font-weight: 400;
+}

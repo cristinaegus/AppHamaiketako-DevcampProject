@@ -8,7 +8,8 @@ export default class NavigationComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div> 
+        
         <NavLink exact to="/" activeClassName="nav-link-active">
           Home
         </NavLink>
