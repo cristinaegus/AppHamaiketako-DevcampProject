@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function () {
+
+const Rutas = function () {
   return (
     <div>
       <div className="rutas">RUTAS</div>
@@ -28,3 +29,4 @@ export default function () {
     </div>
   );
 }
+export default Rutas
