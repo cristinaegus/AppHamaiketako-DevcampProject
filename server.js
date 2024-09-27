@@ -1,11 +1,33 @@
 const express = require('express');
-const port = process.env.PORT || 8080;
 const app = express();
+const mysql = require('mysql');
 
-app.use(express.static(__dirname + '/dist/'));
-app.get(/.*/, function (req, res) {
-  res.sendFile(__dirname + '/dist/index.html');
-})
-app.listen(port);
+const connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'Cristina',
+  password: '',
+  database: 'hamaiketakobaresdb',
+});
 
-console.log("server started");
+connection.connect((error) => {
+  if (error) {
+    console.error('Error de conexión:', error);
+    return;
+  }
+  console.log('Conectado a la base de datos');
+});
+
+app.get('/hamaiketakobardb', (request, response) => {
+  connection.query('SELECT * FROM hamaiketakobaresdb', (error, results) => {
+    if (error) {
+      console.error('Error al obtener las tarjetas:', error);
+      response.status(500).send({ message: 'Error al obtener las tarjetas' });
+    } else {
+      response.send(results);
+    }
+  })
+});
+
+app.listen(3000, () => {
+  console.log('Servidor escuchando en el puerto 3000');
+});

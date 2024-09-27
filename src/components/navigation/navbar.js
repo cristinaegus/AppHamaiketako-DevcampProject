@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {NavLink, Navlinks} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
 import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="navbar">
           <div className="nav-logo">    
               <img 
-              src = {logo01} width={120} height={120}
+              src = {logo01} width={150} height={150}
               />
          </div>
             <div className="tituloweb">
@@ -27,13 +27,10 @@ const Navbar = () => {
           <h3>La ruta imprescindible para ir de pintxos</h3>
           </div>
             <div className={`nav_items ${isOpen && "open"}`}>
-                <NavLink exact to = "/"> 
-                INICIO</NavLink>
-                <NavLink exact to = "/rutas">
-                RUTAS</NavLink>
-                <NavLink exact to = "/blog">
-                BLOG</NavLink>
-                          
+                <NavLink exact to = "/home">INICIO</NavLink>
+                <NavLink exact to = "/rutas">RUTAS</NavLink>
+                <NavLink exact to = "/blog">BLOG</NavLink>
+                    
             </div>
             <div className={`nav_toggle ${isOpen && "open"}`} onClick={ () => setIsOpen(!isOpen)} >
                 <span></span>
@@ -44,4 +41,3 @@ const Navbar = () => {
     )
 }
 export default Navbar
-

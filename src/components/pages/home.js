@@ -1,5 +1,7 @@
 import React from "react";
-
+import App from "../app";
 export default function() {
-  return <div>Homepage</div>;
+  return <div>
+    <App/>
+    </div>;
 }

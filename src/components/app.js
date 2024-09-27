@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import Navbar from './navigation/navbar';
 import Carousel from './navigation/carousel';
 import Formulario from '../components/formulario';
+import Tarjetas from '../components/tarjetas';
+
 
 
 
@@ -42,18 +44,21 @@ function App() {
                 en las zonas de Bilbao, donde encontramos rutas de “cocina en miniatura”.
                 Existen rutas de “pintxos”,cada una con su propio estilo. 
                 Te gustará sumarte a la experiencia saboreando algunas de esas delicias y pintxos.
-                Aqui te propongo unas ideas para rutas de pintxos por el centro de Bilbao</p>
+                Cuentanos tu experiencia y nos pondremos en contacto contigo</p>
                 <div className="fototitulo">
                     <img src={antxoa} width={400} height={350}/>
                 </div>
             <div className ="form">
             <h3>Deja tu opinion</h3>
             <Formulario />
+            <div className='tarjetas'>
+            <Tarjetas />
             </div>
           </div>      
         </div>
       </div>
     </div>
+  </div>
   );
 }
 export default App;

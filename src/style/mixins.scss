@@ -18,7 +18,7 @@
 
 @mixin input-element {
   input {
-    font-family: "Titillium Web", sans-serif;
+    font-family: "Tilt Neon", sans-serif;
     color: $charcoal;
     padding: 5px 0px;
     width: 100%;
@@ -40,4 +40,43 @@
 @mixin base-grid() {
   display: grid;
   grid-gap: 21px;
+}
+
+@mixin base-grid-mobile() {
+  display: grid;
+  grid-gap: 21px;
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: $mobile) {
+  // Estilos para pantallas pequeñas (mobile)
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  .titulo {
+    font-size: 24px;
+  }
+}
+@mixin navbar {
+  max-width: $mobile;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@mixin pagecontent {
+  max-width:$mobile ;
+  display: grid;
+  grid-template-columns: 1fr;
+ 
+}
+@mixin right-column {
+  max-width:$mobile ;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@mixin form{
+  max-width: $mobile;
+  display: grid;  
+  grid-template-columns: 1fr;
 }
