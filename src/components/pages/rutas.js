@@ -1,19 +1,19 @@
 import React from 'react';
 import Navbar from '../navigation/navbar';
-
+import logo01 from "../../../static/assets/images/logo01.png";
 
 
 const Rutas = () => {
   return (
     <div>
       <Navbar />
-      <div className="container-fluid">
+      <div className="container">
         <div className="container mt-5">
-          <h1>Rutas</h1>
+        
           <div className="row">
             <div className="col-md-4">
               <div className="card">
-                <img src="https://picsum.photos/200/300" className="card-img-top" alt="..."></img>
+                <img src= {logo01} width={200} height={200}></img>
                 <div className="card-body">
                   <h5 className="card-title">Ruta 1</h5>
                   <p className="card-text">Descripción de la ruta 1</p>

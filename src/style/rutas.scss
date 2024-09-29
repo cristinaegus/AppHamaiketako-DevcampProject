@@ -1,20 +1,19 @@
 
-    
-    .card-container {
-        display: grid;
-        flex-direction: row;
-        align-items: center;
-        background-color: #e1e3e9;
-        height: 500px;
-        width: 300px;
-        padding: 20px;
-        border-radius: 10px;
-        font-family: "Tilt Neon", sans-serif;
-        color:$dark-teal;
-    }
-  
+.row {
+    display: flex; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content:center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap:wrap; 
+   
+    gap: 16px; 
+}
+
+
      .card-img {
-        width: 62%;
+        width: 30%;
         border-radius: 1rem 1rem 0 0;
     }
   
