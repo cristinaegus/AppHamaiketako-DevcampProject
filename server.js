@@ -1,10 +1,11 @@
-const express = require('express');
-const app = express();
+import react from 'react';
+import Mysql from 'mysql';
+
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: '127.0.0.1',
-  user: 'Cristina',
+  user: 'root',
   password: '',
   database: 'hamaiketakobaresdb',
 });
@@ -18,7 +19,7 @@ connection.connect((error) => {
 });
 
 app.get('/hamaiketakobardb', (request, response) => {
-  connection.query('SELECT * FROM hamaiketakobaresdb', (error, results) => {
+  connection.query('SELECT * FROM hamaiketakobardb', (error, results) => {
     if (error) {
       console.error('Error al obtener las tarjetas:', error);
       response.status(500).send({ message: 'Error al obtener las tarjetas' });

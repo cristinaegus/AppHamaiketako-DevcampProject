@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default function() {
-    return <div>Blog</div>; 
+export default function Blog() {    
+    return (        
+        <div>
+            <h1>Blog</h1>
+        </div>
+    )
 }
-            
-// crear un pequeño formulario 
