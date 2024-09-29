@@ -1,9 +1,13 @@
 import React from 'react';
+//crear una funcion para renderizar el blog
 
-export default function Blog() {    
-    return (        
+
+function Blog() {
+    return (
         <div>
             <h1>Blog</h1>
         </div>
-    )
+    );
 }
+
+export default Blog;

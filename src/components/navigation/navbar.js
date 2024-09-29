@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { NavLink } from "react-router-dom";
+import {Link} from "react-router-dom";
 import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
 import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
 
@@ -7,7 +7,8 @@ import logo01 from "../../../static/assets/images/logo01.png";
 
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [activeIndex, setActiveIndex] = useState(0)
+        const [isOpen, setIsOpen] = useState(false)
    
     return(
         <div className="navbar">
@@ -20,12 +21,18 @@ const Navbar = () => {
           <h1>Hamaiketako  BILBAO </h1>
           <h3>La ruta imprescindible para ir de pintxos</h3>
           </div>
-            <div className={`nav_items ${isOpen && "open"}`}>
-                <NavLink exact to="/"activeClassName="nav-link-active">HOME</NavLink>
-                <NavLink  to="/rutas"activeClassName="nav-link-active">RUTAS</NavLink>
-                <NavLink  to="/blog"activeClassName="nav-link-active" >BLOG</NavLink>
-            </div>
-            <div className={`nav_toggle ${isOpen && "open"}`} onClick={ () => setIsOpen(!isOpen)} >
+          <div className={`nav_items ${isOpen && "open"}`}>
+                <Link exact to="/" activeClassName="nav-link-active">
+                    HOME
+                </Link>
+                <Link to="/rutas " activeClassName="nav-link-active">
+                    RUTAS
+                </Link>
+                <Link to="/blog " activeClassName="nav-link-active">
+                    BLOG
+                </Link>
+                </div>
+                <div className={`nav_toggle ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
                 <span></span>
                 <span></span>
                 <span></span>

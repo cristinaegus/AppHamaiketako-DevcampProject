@@ -1,10 +1,48 @@
-.tarjeta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
+
+    
+    .card-container {
+        display: grid;
+        flex-direction: row;
+        align-items: center;
+        background-color: #e1e3e9;
+        height: 500px;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        font-family: "Tilt Neon", sans-serif;
+        color:$dark-teal;
+    }
+  
+     .card-img {
+        width: 62%;
+        border-radius: 1rem 1rem 0 0;
+    }
+  
+    .card-title {
+        margin: 0.5rem 5%;
+        text-align: center; 
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $teal;
+        font-family: "Tilt Neon", sans-serif;
+    }
+  
+    .card-description {
+        margin: 0.5rem 5%;
+        text-align: center; 
+        font-size: 1rem;
+        text-decoration: none;
+        color: $charcoal;
+        font-family: "Tilt Neon", sans-serif;
+     }
+  
+    .card-btn {
+        text-align: center;
+        width: 90%;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        background-color: #2563eb;
+        color: white;
+        text-decoration: none;
+        margin: 0.5rem 0.5rem;
+    } 

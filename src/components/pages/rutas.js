@@ -1,21 +1,51 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { Card } from 'react-bootstrap';
+import Navbar from '../navigation/navbar';
 
-export default function RutasCard() {
+
+
+const Rutas = () => {
   return (
-    <Card>
-      <Card.Img src="https://picsum.photos/id/237/536/354" />
-      <Card.Body>
-        <Card.Title as="h5">Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card content.
-        </Card.Text>
-      </Card.Body>
-      <Card.Body>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <div>
+      <Navbar />
+      <div className="container-fluid">
+        <div className="container mt-5">
+          <h1>Rutas</h1>
+          <div className="row">
+            <div className="col-md-4">
+              <div className="card">
+                <img src="https://picsum.photos/200/300" className="card-img-top" alt="..."></img>
+                <div className="card-body">
+                  <h5 className="card-title">Ruta 1</h5>
+                  <p className="card-text">Descripción de la ruta 1</p>
+                  <button className="btn btn-primary">Ver más</button>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card">
+                <img src="https://picsum.photos/200/301" className="card-img-top" alt="..."></img>
+                <div className="card-body">
+                  <h5 className="card-title">Ruta 2</h5>
+                  <p className="card-text">Descripción de la ruta 2</p>
+                  <button className="btn btn-primary">Ver más</button>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card">
+                <img src="https://picsum.photos/200/302" className="card-img-top" alt="..."></img>
+                <div className="card-body">
+                  <h5 className="card-title">Ruta 3</h5>
+                  <p className="card-text">Descripción de la ruta 3</p>
+                  <button className="btn btn-primary">Ver más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default Rutas;
