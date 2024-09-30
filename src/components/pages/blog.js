@@ -39,7 +39,7 @@ useEffect(() => {
         <div className="container">
           <div className="blog-items">
             <h1>Blog</h1>
-            <p>En esta sección encontrará el blog de la aplicación</p>
+            <p>Todas vuestras opiniones y dudas</p>
             <div className="blog-posts">
               
             {posts.map((post) => (
@@ -59,5 +59,3 @@ useEffect(() => {
    
   
   export default Blog;
-
-
