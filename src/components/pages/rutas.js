@@ -1,9 +1,10 @@
 import React from 'react';
 import Navbar from '../navigation/navbar';
 
-import antxoTaberna from "../../../static/assets/images/antxoaTaberna.jpg";
+
 import elglobo from "../../../static/assets/images/el-globo.jpg";
 import antxoTabernaFachada from "../../../static/assets/images/antxoaTabernaFachada.jpg";
+import poza from "../../../static/assets/images/poza.jpg";
 
 
 
@@ -17,11 +18,12 @@ const Rutas = () => {
           <div className="row">
             <div className="col-md-4">
               <div className="card">
-                <img src= {antxoTaberna} width={225} height={300}></img>  
+                <img src= {antxoTabernaFachada} width={225} height={300}></img>  
                 <div className="card-body">
                   <h5 className="card-title">Ruta 1</h5>
                   <p className="card-text">Ruta Casco Viejo</p>
-                  <button className="btn btn-primary">Ver más</button>
+                  <button className="btn btn-primary" 
+                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/rutas/casco-viejo"}>Ver más</button>
                 </div>
               </div>
             </div>
@@ -30,18 +32,20 @@ const Rutas = () => {
               <img src= {elglobo} width={225} height={300}></img> 
                 <div className="card-body">
                   <h5 className="card-title">Ruta 2</h5>
-                  <p className="card-text">Ruta por el Ensache y Gran Via</p>
-                  <button className="btn btn-primary">Ver más</button>
+                  <p className="card-text">Ruta por Diputación y Gran Via</p>
+                  <button className="btn btn-primary" 
+                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/rutas/diputacion"}>Ver más</button>
                 </div>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card">
-              <img src= {antxoTabernaFachada} width={225} height={300}></img> 
+              <img src= {poza} width={225} height={300}></img> 
                 <div className="card-body">
                   <h5 className="card-title">Ruta 3</h5>
-                  <p className="card-text">Ruta por Indautxu</p>
-                  <button className="btn btn-primary">Ver más</button>
+                  <p className="card-text">Ruta por Poza </p>
+                  <button className="btn btn-primary" 
+                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/rutas/poza"}>Ver más</button>
                 </div>
               </div>
             </div>
