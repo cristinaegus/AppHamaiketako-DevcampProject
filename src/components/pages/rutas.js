@@ -1,6 +1,10 @@
 import React from 'react';
 import Navbar from '../navigation/navbar';
-import logo01 from "../../../static/assets/images/logo01.png";
+
+import antxoTaberna from "../../../static/assets/images/antxoaTaberna.jpg";
+import elglobo from "../../../static/assets/images/el-globo.jpg";
+import antxoTabernaFachada from "../../../static/assets/images/antxoaTabernaFachada.jpg";
+
 
 
 const Rutas = () => {
@@ -13,30 +17,30 @@ const Rutas = () => {
           <div className="row">
             <div className="col-md-4">
               <div className="card">
-                <img src= {logo01} width={200} height={200}></img>
+                <img src= {antxoTaberna} width={225} height={300}></img>  
                 <div className="card-body">
                   <h5 className="card-title">Ruta 1</h5>
-                  <p className="card-text">Descripción de la ruta 1</p>
+                  <p className="card-text">Ruta Casco Viejo</p>
                   <button className="btn btn-primary">Ver más</button>
                 </div>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card">
-                <img src="https://picsum.photos/200/301" className="card-img-top" alt="..."></img>
+              <img src= {elglobo} width={225} height={300}></img> 
                 <div className="card-body">
                   <h5 className="card-title">Ruta 2</h5>
-                  <p className="card-text">Descripción de la ruta 2</p>
+                  <p className="card-text">Ruta por el Ensache y Gran Via</p>
                   <button className="btn btn-primary">Ver más</button>
                 </div>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card">
-                <img src="https://picsum.photos/200/302" className="card-img-top" alt="..."></img>
+              <img src= {antxoTabernaFachada} width={225} height={300}></img> 
                 <div className="card-body">
                   <h5 className="card-title">Ruta 3</h5>
-                  <p className="card-text">Descripción de la ruta 3</p>
+                  <p className="card-text">Ruta por Indautxu</p>
                   <button className="btn btn-primary">Ver más</button>
                 </div>
               </div>
