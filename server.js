@@ -1,6 +1,9 @@
 import react from 'react';
 import Mysql from 'mysql';
 
+
+const express = require('express');
+const app = express();
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
@@ -10,23 +13,27 @@ const connection = mysql.createConnection({
   database: 'hamaiketakobaresdb',
 });
 
-connection.connect((error) => {
-  if (error) {
-    console.error('Error de conexión:', error);
+db.connect((err) => {
+  if (err) {
+    console.error('Error al conectar a la base de datos:', err);
     return;
   }
   console.log('Conectado a la base de datos');
 });
 
-app.get('/hamaiketakobardb', (request, response) => {
-  connection.query('SELECT * FROM hamaiketakobardb', (error, results) => {
-    if (error) {
-      console.error('Error al obtener las tarjetas:', error);
-      response.status(500).send({ message: 'Error al obtener las tarjetas' });
+app.use(express.json());
+
+app.post('/formulario', (req, res) => {
+  const { nombre, email, mensaje } = req.body;
+  const query = 'INSERT INTO formulario (nombre, email, mensaje) VALUES (?, ?, ?)';
+  db.query(query, [nombre, email, mensaje], (err, results) => {
+    if (err) {
+      console.error('Error al guardar los datos:', err);
+      res.status(500).send({ message: 'Error al guardar los datos' });
     } else {
-      response.send(results);
+      res.send({ message: 'Datos guardados correctamente' });
     }
-  })
+  });
 });
 
 app.listen(3000, () => {
