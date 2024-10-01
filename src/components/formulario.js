@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 const Formulario = () => {
     // Estado para almacenar los datos del formulario
     const [nombre, setNombre] = useState('');
