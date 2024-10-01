@@ -1,4 +1,4 @@
-# React/Redux/Router Starter Project
+# React/Redux/Router Capstone Project - Hamaiketako App 
 
 > Provided for the students of the [Bottega Code School](https://bottega.tech/)
 
