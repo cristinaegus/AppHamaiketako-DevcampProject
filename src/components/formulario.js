@@ -8,7 +8,14 @@ const Formulario = () => {
     // Función para manejar el envío del formulario
     const handleSubmit = (event) => {
       event.preventDefault();
-      console.log('Formulario enviado:', { nombre, email, mensaje });
+      const datos = { nombre, email, mensaje };
+      axios.post('http://localhost:3000/formulario', datos)
+        .then((response) => {
+          console.log('Datos guardados correctamente:', response.data);
+        })
+        .catch((error) => {
+          console.error('Error al guardar los datos:', error);
+        });
     };
   
     return (
