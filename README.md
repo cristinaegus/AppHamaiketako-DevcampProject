@@ -8,5 +8,5 @@
 Este es un proyecto para el Capstone Project del Curso Full Stack Bottega Univerity 2024
 
 
-Esta proyecto este almacenado en Vercel en https://app-hamaiketako-devcamp-project.vercel.app/
+Esta proyecto este almacenado en Netlify https://hamaiketako.netlify.app/
 
