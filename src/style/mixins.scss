@@ -80,3 +80,13 @@
   display: grid;  
   grid-template-columns: 1fr;
 }
+@mixin row{
+  max-width: $mobile;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@mixin container {
+  max-width: $mobile;
+  display: grid;
+  grid-template-columns: 1fr;
+}
