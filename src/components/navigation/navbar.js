@@ -22,13 +22,13 @@ const Navbar = () => {
           <h3>La ruta imprescindible para ir de pintxos</h3>
           </div>
           <div className={`nav_items ${isOpen && "open"}`}>
-                <Link exact to="/" activeClassName="nav-link-active">
+                <Link exact to="/" activeclassname="nav-link-active">
                     HOME
                 </Link>
-                <Link to="/rutas " activeClassName="nav-link-active">
+                <Link to="/rutas " activeclassname="nav-link-active">
                     RUTAS
                 </Link>
-                <Link to="/blog " activeClassName="nav-link-active">
+                <Link to="/blog " activeclassname="nav-link-active">
                     BLOG
                 </Link>
                 </div>
