@@ -40,12 +40,19 @@
 @mixin base-grid() {
   display: grid;
   grid-gap: 21px;
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    max-width: $mobile;
+  }
 }
 
 @mixin base-grid-mobile() {
   display: grid;
   grid-gap: 21px;
-  grid-template-columns: 1fr;
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    max-width: $mobile;
+  }
 }
 
 @media (max-width: $mobile) {
@@ -63,30 +70,48 @@
   height: 200px;
   display: grid;
   grid-template-columns: 1fr;
+  @media (max-width: $mobile) {
+    max-width: $mobile;
+  }
 }
 @mixin pagecontent {
   max-width:$mobile ;
   display: grid;
   grid-template-columns: 1fr;
+  @media (max-width: $mobile) {
+    max-width: $mobile;
+  }
  
 }
 @mixin right-column {
   max-width:$mobile ;
   display: grid;
   grid-template-columns: 1fr;
+  @media (max-width: $mobile) {
+    max-width: $mobile;
+  }
 }
 @mixin form{
   max-width: $mobile;
   display: grid;  
   grid-template-columns: 1fr;
+  @media (max-width: $mobile) {
+    max-width: $mobile;
+  }
 }
 @mixin row{
   max-width: $mobile;
   display: grid;
   grid-template-columns: 1fr;
+  @media (max-width: $mobile) {
+    max-width: $mobile;
+  }
 }
 @mixin container {
   max-width: $mobile;
   display: grid;
   grid-template-columns: 1fr;
+  @media (max-width: $mobile) {
+    max-width: $mobile;
+  }
 }
