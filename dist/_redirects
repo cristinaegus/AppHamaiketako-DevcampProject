@@ -1,4 +1,6 @@
 /* /index.html 200
 
+/ /rutas/:slug 301
 
+/ /blog/:slug 301
 
