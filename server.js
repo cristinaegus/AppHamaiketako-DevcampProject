@@ -1,19 +1,14 @@
-import react from 'react';
-import Mysql from 'mysql';
 
-
-const express = require('express');
-const app = express();
-const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
   password: '',
-  database: 'apphamaiketako.formulario',
+  database: 'apphamaiketako.formopinion',
 });
 
-db.connect((err) => {
+
+connection.connect((err) => {
   if (err) {
     console.error('Error al conectar a la base de datos:', err);
     return;
@@ -21,12 +16,12 @@ db.connect((err) => {
   console.log('Conectado a la base de datos');
 });
 
-app.use(express.json());
+
 
 app.post('/formulario', (req, res) => {
-  const { nombre, email, mensaje } = req.body;
-  const query = 'INSERT INTO formulario (nombre, email, mensaje) VALUES (?, ?, ?)';
-  db.query(query, [nombre, email, mensaje], (err, results) => {
+  const { nombrebar, comentario } = req.body;
+  const query = 'INSERT INTO formulario (nombrebar,comentario) VALUES (?, ?, ?)';
+  db.query(query, [nombrebar, comentario], (err, results) => {
     if (err) {
       console.error('Error al guardar los datos:', err);
       res.status(500).send({ message: 'Error al guardar los datos' });
