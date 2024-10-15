@@ -25,7 +25,7 @@ connection.connect((err) => {
   }
   console.log('Conectado a la base de datos');
 });
-app.post('/formopinion', (req, res) => {
+app.post('/formopinion',async (req, res) => {
   const { nombrebar, comentario } = req.body;
   const query = 'INSERT INTO formopinion (nombrebar, comentario) VALUES (?, ?)';
   const params = [nombrebar, comentario];
