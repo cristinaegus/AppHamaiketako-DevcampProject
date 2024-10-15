@@ -1,3 +1,12 @@
+import mysql from 'mysql';
+import express from 'express';
+import cors  from 'cors';
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
 
 
 const connection = mysql.createConnection({
@@ -8,6 +17,7 @@ const connection = mysql.createConnection({
 });
 
 
+
 connection.connect((err) => {
   if (err) {
     console.error('Error al conectar a la base de datos:', err);
@@ -15,18 +25,18 @@ connection.connect((err) => {
   }
   console.log('Conectado a la base de datos');
 });
-
-
-
-app.post('/formulario', (req, res) => {
+app.post('/formopinion', (req, res) => {
   const { nombrebar, comentario } = req.body;
-  const query = 'INSERT INTO formulario (nombrebar,comentario) VALUES (?, ?, ?)';
-  db.query(query, [nombrebar, comentario], (err, results) => {
+  const query = 'INSERT INTO formopinion (nombrebar, comentario) VALUES (?, ?)';
+  const params = [nombrebar, comentario];
+
+  connection.query(query, params, (err, results) => {
     if (err) {
       console.error('Error al guardar los datos:', err);
       res.status(500).send({ message: 'Error al guardar los datos' });
     } else {
-      res.send({ message: 'Datos guardados correctamente' });
+      console.log('Datos guardados correctamente:', results);
+      res.status(200).send({ message: 'Datos guardados correctamente', data: results });
     }
   });
 });

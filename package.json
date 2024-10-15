@@ -8,7 +8,8 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
     "heroku-postbuild": "npm run build",
     "precommit": "eslint src",
-    "prod": "NODE_ENV=production node server.js"
+    "prod": "NODE_ENV=production node server.js",
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -46,13 +47,14 @@
     "bootstrap": "^5.3.3",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.5.2",
+    "cors": "^2.8.5",
     "create-alchemy-sql-be": "^1.17.11",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "eslint": "^4.2.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.1.0",
-    "express": "^4.17.1",
+    "express": "^4.21.1",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
     "flask": "^0.2.10",

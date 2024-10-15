@@ -51,7 +51,7 @@ useEffect(() => {
               <div key={post.id} className="blog-posts">
                 <h2>{post.title}</h2>
                   <p>{post.content}</p>
-                  <img src={post.featured_image_url } width={250} height={250}   />
+                  <img src={post.featured_image_url } width={100} height={100}   />
                 
               </div>
             ))}

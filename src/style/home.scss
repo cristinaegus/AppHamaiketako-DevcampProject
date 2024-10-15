@@ -4,4 +4,12 @@
     margin-left: 40px;
     margin-right: 40px;
     font-size: 25px;
+  
+@media small and (max-width: 378px) {
+
+    .listabares{    
+        margin-left: 0px;
+        margin-right: 0px;
+    }   
+}
 }

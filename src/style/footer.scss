@@ -1,0 +1,12 @@
+.footer{
+    background:rgb(111, 135, 214);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+      @media (max-width: $mobile ) { 
+        height: 80px;
+        flex-direction: column;
+      } 
+}

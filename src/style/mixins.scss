@@ -95,9 +95,7 @@
   max-width: $mobile;
   display: grid;  
   grid-template-columns: 1fr;
-  @media (max-width: $mobile) {
-    max-width: $mobile;
-  }
+  
 }
 @mixin row{
   max-width: $mobile;

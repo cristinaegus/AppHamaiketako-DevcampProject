@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from '../navigation/carousel';
 import Formulario from '../formulario';
 import Navbar from '../navigation/navbar';
+import Footer from '../navigation/footer';
 
 
 import foto1 from '../../../static/assets/images/gettyimages-Guggenheim.jpg';
@@ -60,6 +61,7 @@ const Home = () => {
       </div>
      <Formulario />
     </div>
+    <div><Footer/></div>
   </div>
 </div>      
 </div>
