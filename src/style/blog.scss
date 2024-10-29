@@ -1,68 +1,51 @@
-.h1{
+.blog-items {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+
+  h1 {
     text-align: center;
     font-family: "Tilt Neon", sans-serif;
-    color: rgb(111, 135, 214);   
-}
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: "Tilt Neon", sans-serif;
-    color:rgb(111, 135, 214); 
-    
-  }
-  
-  .blog-items {
-    padding: 10px;
-  }
-  
-  .blog-posts {
-    display: inline-block;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    
-
-    justify-content: center;
-    font-family: "Tilt Neon", sans-serif;
-    width: fit-content;
-    height: fit-content;
-    color:rgb(111, 135, 214); 
-  }
-  
-  .blog-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 50px);
-  }
-  
-  .blog-post h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-family: "Tilt Neon", sans-serif;
-    color: rgb(111, 135, 214);; 
-    order: -1px;
-  }
-  
-  .blog-post p {
-    font-size: 18px;
+    color: rgb(111, 135, 214);
     margin-bottom: 20px;
-    order: -1px;
   }
-  .blog-post img {
-    
-    margin-top: 10px;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-post {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 1.5rem;
+    color: rgb(111, 135, 214);
     margin-bottom: 10px;
-    margin-right: 10px;
-  
-    border-radius: 1rem 1rem 0 0;
-    order: -1px;
-    margin-top: 1rem;
   }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+}

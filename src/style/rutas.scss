@@ -1,47 +1,66 @@
-
 .row {
-    display: flex; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-content:center; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex-wrap:wrap; 
-   
-    gap: 16px; 
-}
-
-
-     .card-img {
-        width: 30%;
-        border-radius: 1rem 1rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .card-container {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+  
+    @media (max-width: 768px) {
+      min-width: 100%;
+      margin: 10px 0;
     }
+  }
   
-    .card-title {
-        margin: 0.5rem 5%;
-        text-align: center; 
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: $teal;
-        font-family: "Tilt Neon", sans-serif;
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card-title {
+    margin: 15px;
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgb(111, 135, 214);
+    font-family: "Tilt Neon", sans-serif;
+  }
+  
+  .card-description {
+    margin: 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    font-family: "Tilt Neon", sans-serif;
+  }
+  
+  .card-btn {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #1d4ed8;
     }
-  
-    .card-description {
-        margin: 0.5rem 5%;
-        text-align: center; 
-        font-size: 1rem;
-        text-decoration: none;
-        color: $charcoal;
-        font-family: "Tilt Neon", sans-serif;
-     }
-  
-    .card-btn {
-        text-align: center;
-        width: 90%;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        background-color: #2563eb;
-        color: white;
-        text-decoration: none;
-        margin: 0.5rem 0.5rem;
-    } 
+  }

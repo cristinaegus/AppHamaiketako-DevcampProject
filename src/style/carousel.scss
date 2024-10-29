@@ -4,7 +4,14 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
- 
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 10px;
+  }
 }
 
 .carousel-item {
@@ -14,11 +21,17 @@
   align-items: center;
   width: 100%;
   margin: 0 10px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 }
-
-
-
-
 
 button {
   background-color: #007bff;
@@ -26,8 +39,16 @@ button {
   border: none;
   padding: 10px;
   cursor: pointer;
+  margin: 0 10px;
+
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
 }
 
 button:hover {
   background-color: #0056b3;
 }
+
+
+
