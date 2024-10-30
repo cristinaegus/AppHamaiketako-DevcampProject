@@ -1,2 +1,3 @@
-rewrite ^/rutas/:slug$ /blog/:slug permanent;
-rewrite ^/blog/:slug$ /index.html permanent;
+/* /index.html 200
+/ /rutas/:slug 301
+/ /blog/:slug 301
