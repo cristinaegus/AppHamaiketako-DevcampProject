@@ -23,7 +23,7 @@ const Rutas = () => {
                   <h5 className="card-title">Ruta 1</h5>
                   <p className="card-text">Ruta Casco Viejo</p>
                   <button className="btn btn-primary" 
-                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/rutas/casco-viejo"}>Ver más</button>
+                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/buscador-de-pintxos_2"}>Ver más</button>
                 </div>
               </div>
             </div>
@@ -34,7 +34,7 @@ const Rutas = () => {
                   <h5 className="card-title">Ruta 2</h5>
                   <p className="card-text">Ruta por Diputación y Gran Via</p>
                   <button className="btn btn-primary" 
-                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/rutas/diputacion"}>Ver más</button>
+                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/buscador-de-pintxos_2?zona=1361356724448,1361356724666&tipologia="}>Ver más</button>
                 </div>
               </div>
             </div>
@@ -43,9 +43,9 @@ const Rutas = () => {
               <img src= {poza} width={225} height={300}></img> 
                 <div className="card-body">
                   <h5 className="card-title">Ruta 3</h5>
-                  <p className="card-text">Ruta por Poza </p>
+                  <p className="card-text">Ruta por Pozas</p>
                   <button className="btn btn-primary" 
-                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/rutas/poza"}>Ver más</button>
+                  onClick={() => window.location.href = "https://www.bilbaoturismo.net/BilbaoTurismo/es/buscador-de-pintxos_2?zona=1361356724448,1361356724666,1361356724652&tipologia="}>Ver más</button>
                 </div>
               </div>
             </div>
