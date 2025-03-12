@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes passing-through {
   0% {
     opacity: 0;
@@ -250,6 +251,7 @@
   margin-left: -40px;
   background: rgba(255, 255, 255, 0.9);
   -webkit-transform: scale(1);
+  transform: scale(1);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -361,8 +363,8 @@ div.filepicker {
   height: 0;
   border-width: 11px 0 0 11px;
   border-style: solid;
-  border-color: white transparent transparent #920035;
-}@charset "UTF-8";
+}
+
 /*!
 * Bootstrap  v5.3.3 (https://getbootstrap.com/)
 * Copyright 2011-2024 The Bootstrap Authors
@@ -563,6 +565,13 @@ body {
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -779,6 +788,7 @@ caption {
 th {
   text-align: inherit;
   text-align: -webkit-match-parent;
+  text-align: match-parent;
 }
 
 tbody, td, tfoot, th, thead, tr {
@@ -828,6 +838,8 @@ select:disabled {
 
 [type=button], [type=reset], [type=submit], button {
   -webkit-appearance: button;
+  appearance: button;
+  appearance: button;
 }
 
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
@@ -878,6 +890,7 @@ legend + * {
 
 [type=search] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -2688,7 +2701,7 @@ textarea.form-control-lg {
   background-size: contain;
   border: var(--bs-border-width) solid var(--bs-border-color);
   -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+  print-color-adjust: exact;
   print-color-adjust: exact;
 }
 
