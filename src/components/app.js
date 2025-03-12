@@ -19,7 +19,7 @@ const App = () => {
             <Route path="/blog" component={Blog} />
           </Switch>
         </main>
-        <Footer />
+        
       </div>
     </Router>
   );
