@@ -1,51 +1,68 @@
 .blog-items {
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  h1 {
-    text-align: center;
-    font-family: "Tilt Neon", sans-serif;
-    color: rgb(111, 135, 214);
-    margin-bottom: 20px;
+  .blog-header {
+    h1 {
+      text-align: center;
+      color: rgb(111, 135, 214);
+      font-size: 2.5rem;
+      margin: 2rem auto;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid rgb(111, 135, 214);
+      max-width: 800px;
+    }
   }
 }
 
 .blog-posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 0;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
   }
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .blog-post {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin-bottom: 20px;
+  .card-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
 
-  h2 {
-    font-size: 1.5rem;
-    color: rgb(111, 135, 214);
-    margin-bottom: 10px;
-  }
+    @media (max-width: 768px) {
+      min-width: 100%;
+      margin: 10px 0;
+    }
 
-  p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    line-height: 1.5;
-  }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
 
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 10px 0;
+    .card-title {
+      margin: 15px;
+      text-align: center;
+      font-size: 1.25rem;
+      color: rgb(111, 135, 214);
+      font-family: "Tilt Neon", sans-serif;
+    }
+
+    .card-description {
+      margin: 15px;
+      text-align: center;
+      font-size: 1rem;
+      color: #666;
+      font-family: "Tilt Neon", sans-serif;
+      line-height: 1.5;
+    }
   }
 }

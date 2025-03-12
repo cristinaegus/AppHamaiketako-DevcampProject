@@ -1,0 +1,47 @@
+// Layout styles
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.col {
+  flex: 1;
+  padding: 15px;
+}
+
+// Media queries for responsive design
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .row {
+    margin: -10px;
+  }
+
+  .col {
+    flex: 0 0 100%;
+    padding: 10px;
+  }
+}
+
+// Grid system
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

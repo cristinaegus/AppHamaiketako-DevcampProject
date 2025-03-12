@@ -9,7 +9,6 @@ module.exports = {
 
   resolve: {
     extensions: ['.js', '.scss'],
-
     modules: ['node_modules'],
   },
 
@@ -20,28 +19,39 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-
       {
-        type: 'javascript/auto',
         test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-          publicPath: '/',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+            publicPath: '/',
+          },
         },
       },
-
       {
         test: /\.(mp4|webm)$/,
-        loader: 'url?limit=10000',
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+          },
+        },
       },
     ],
   },
 
   plugins: [
     new SplitChunksPlugin({
-      name: ['app', 'vendor'],
-      minChunks: Infinity,
+      chunks: 'all',
+      minSize: 0,
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
     }),
   ],
 };

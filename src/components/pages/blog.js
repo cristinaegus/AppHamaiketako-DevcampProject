@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from '../navigation/navbar';
 
-
-
-//crear una funcion para renderizar el blog
 const Blog = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    const [posts, setPosts] = useState([]); // Estado para almacenar las publicaciones
-    const [loading, setLoading] = useState(true); // Estado para indicar si la solicitud está en curso
-    const [error, setError] = useState(null);
-   
-    
-// Estado para almacenar cualquier error
-
-useEffect(() => {
+  useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get('https://cegusquiza.devcamp.space/portfolio/portfolio_blogs');
@@ -24,45 +16,38 @@ useEffect(() => {
         setError(error.message);
         setLoading(false);
       }
-        };
-        fetchPosts();
-            [0,3] ;  
-    }, []);
+    };
+    fetchPosts();
+  }, []);
 
-        if (loading) {
-        return <p>Cargando...</p>;
-            }
+  if (loading) return <div className="text-center p-4">Cargando...</div>;
+  if (error) return <div className="text-center p-4 text-danger">Error: {error}</div>;
 
-        if (error) {
-            return <p>Error: {error}</p>;
-        }
-    
-
-    return (
-      <div>
-        <Navbar />
-        <div className="container">
-          <div className="blog-items">
-            <h1>Blog</h1>
-            <p>Listado Posts: Todas vuestras opiniones </p>
-            <div className="blog-posts">
-              
-              {posts.map((post) => (
-              <div key={post.id} className="blog-posts">
-                <h2>{post.title}</h2>
-                  <p>{post.content}</p>
-                  <img src={post.featured_image_url } width={100} height={100}   />
-                
-              </div>
-            ))}
+  return (
+    <div className="blog-items">
+      <div className="blog-header">
+        <h1>Blog de Pintxos</h1>
+        <p>Descubre las opiniones de nuestros visitantes</p>
+      </div>
+      <div className="blog-posts">
+        {posts.map((post) => (
+          <div key={post.id} className="blog-post">
+            <div className="card-container">
+              {post.featured_image_url && (
+                <img 
+                  src={post.featured_image_url} 
+                  className="card-img"
+                  alt={post.title}
+                />
+              )}
+              <h2 className="card-title">{post.title}</h2>
+              <p className="card-description">{post.content}</p>
+            </div>
           </div>
+        ))}
       </div>
     </div>
-  </div>
+  );
+};
 
-    )
-  }
-
-   
-  
-  export default Blog;
+export default Blog;
