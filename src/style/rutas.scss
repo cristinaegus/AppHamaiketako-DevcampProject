@@ -1,3 +1,18 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+
+  h2 {
+    text-align: center;
+    color: rgb(111, 135, 214);
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid rgb(111, 135, 214);
+    max-width: 800px;
+  }
+}
 .row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -10,21 +25,7 @@
   margin: 0 auto;
   padding: 1rem;
 }
-  .container {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 1rem;
   
-    h2 {
-      text-align: center;
-      color: rgb(111, 135, 214);
-      font-size: 2.5rem;
-      margin: 2rem auto;
-      padding-bottom: 1rem;
-      border-bottom: 3px solid rgb(111, 135, 214);
-      max-width: 800px;
-    }
-  }
   .card-container {
     background: white;
     border-radius: 10px;
