@@ -7,11 +7,13 @@
     h1 {
       text-align: center;
       color: rgb(111, 135, 214);
-      font-size: 2.5rem;
-      margin: 2rem auto;
-      padding-bottom: 1rem;
-      border-bottom: 3px solid rgb(111, 135, 214);
-      max-width: 800px;
+    margin-bottom: 20px;
+    }
+    p {
+      text-align: center;
+      color: #666;
+      font-family: "Tilt Neon", sans-serif;
+      line-height: 1.5;
     }
   }
 }
