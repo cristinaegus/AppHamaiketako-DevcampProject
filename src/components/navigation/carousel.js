@@ -4,46 +4,89 @@ const Carousel = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    // Auto-advance carousel every 5 seconds
-    const timer = setInterval(() => {
-      goNext();
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [activeIndex]);
+    if (items && items.length > 0) {
+      const timer = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [items]);
 
   const goNext = () => {
-    setActiveIndex((activeIndex + 1) % items.length);
+    if (items && items.length > 0) {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
+    }
   };
 
   const goPrev = () => {
-    let index = activeIndex - 1;
-    if (index < 0) {
-      index = items.length - 1;
+    if (items && items.length > 0) {
+      setActiveIndex((prevIndex) => 
+        prevIndex === 0 ? items.length - 1 : prevIndex - 1
+      );
     }
-    setActiveIndex(index);
   };
 
+  if (!items || items.length === 0) {
+    return (
+      <div style={{ textAlign: 'center', padding: '50px' }}>
+        Cargando imágenes del carousel...
+      </div>
+    );
+  }
+
   return (
-    <div className="carousel" role="region" aria-label="Image Carousel">
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '20px',
+      padding: '20px',
+      maxWidth: '800px',
+      margin: '0 auto'
+    }}>
       <button 
         onClick={goPrev}
-        className="carousel-button prev"
-        aria-label="Previous Image"
+        style={{
+          backgroundColor: '#007bff',
+          color: 'white',
+          border: 'none',
+          borderRadius: '50%',
+          width: '40px',
+          height: '40px',
+          fontSize: '20px',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
       >
-        &#8249;
+        ‹
       </button>
       
-      <div className="carousel-item">
+      <div style={{
+        flex: 1,
+        textAlign: 'center'
+      }}>
         {items[activeIndex]}
-        <div className="carousel-indicators">
+        
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '8px',
+          marginTop: '15px'
+        }}>
           {items.map((_, index) => (
             <button
               key={index}
-              className={`indicator ${index === activeIndex ? 'active' : ''}`}
               onClick={() => setActiveIndex(index)}
-              aria-label={`Go to slide ${index + 1}`}
-              aria-current={index === activeIndex}
+              style={{
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                border: 'none',
+                backgroundColor: index === activeIndex ? '#007bff' : '#ccc',
+                cursor: 'pointer'
+              }}
             />
           ))}
         </div>
@@ -51,10 +94,21 @@ const Carousel = ({ items }) => {
       
       <button 
         onClick={goNext}
-        className="carousel-button next"
-        aria-label="Next Image"
+        style={{
+          backgroundColor: '#007bff',
+          color: 'white',
+          border: 'none',
+          borderRadius: '50%',
+          width: '40px',
+          height: '40px',
+          fontSize: '20px',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
       >
-        &#8250;
+        ›
       </button>
     </div>
   );

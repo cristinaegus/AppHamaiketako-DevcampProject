@@ -1,7 +1,7 @@
 import React from 'react';
-import elglobo from "../../../static/assets/images/el-globo.jpg";
-import antxoTabernaFachada from "../../../static/assets/images/antxoaTabernaFachada.jpg";
-import poza from "../../../static/assets/images/poza.jpg";
+import elglobo from '../../../static/assets/images/el-globo.jpg';
+import antxoTabernaFachada from '../../../static/assets/images/antxoaTabernaFachada.jpg';
+import poza from '../../../static/assets/images/poza.jpg';
 
 const Rutas = () => {
   return (

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Table,
   Button,
@@ -11,15 +11,15 @@ import {
   ModalFooter,
   Label,
   Input
-} from "reactstrap";
+} from 'reactstrap';
 
 const initialData = [
-  { id: 1, bar: "El Globo - Diputación 8", comentario: "Los mejores pintxos de txangurro" },
-  { id: 2, bar: "La Viña  - Diputación 10 ", comentario: "Lo mejor del ensanche, muy buen jamón"},
-  { id: 3, bar: "Sorginzulo - Plaza Nueva 12", comentario: "Lo mejor de la plaza nueva , calamares impresionantes" },
-  { id: 4, bar: "La Antxoa - Plaza Nueva 1", comentario: "Especialidad en antxoas, son las mejores" },
-  { id: 5, bar: "Motrikes - Goinkale 41", comentario: "De calidad pero sin pretensiones" },
-  { id: 6, bar: "Sacacorchos - Heros 21", comentario: "Donde encontrar los mejores vinos y cuidados pintxos" },
+  { id: 1, bar: 'El Globo - Diputación 8', comentario: 'Los mejores pintxos de txangurro' },
+  { id: 2, bar: 'La Viña  - Diputación 10 ', comentario: 'Lo mejor del ensanche, muy buen jamón'},
+  { id: 3, bar: 'Sorginzulo - Plaza Nueva 12', comentario: 'Lo mejor de la plaza nueva , calamares impresionantes' },
+  { id: 4, bar: 'La Antxoa - Plaza Nueva 1', comentario: 'Especialidad en antxoas, son las mejores' },
+  { id: 5, bar: 'Motrikes - Goinkale 41', comentario: 'De calidad pero sin pretensiones' },
+  { id: 6, bar: 'Sacacorchos - Heros 21', comentario: 'Donde encontrar los mejores vinos y cuidados pintxos' },
 ];
 
 const Formulario = () => {
@@ -27,9 +27,9 @@ const Formulario = () => {
   const [modalActualizar, setModalActualizar] = useState(false);
   const [modalInsertar, setModalInsertar] = useState(false);
   const [form, setForm] = useState({
-    id: "",
-    bar: "",
-    comentario: "",
+    id: '',
+    bar: '',
+    comentario: '',
   });
 
   const handleChange = (e) => {
@@ -77,7 +77,7 @@ const Formulario = () => {
     };
     setData([...data, newItem]);
     setModalInsertar(false);
-    setForm({ id: "", bar: "", comentario: "" });
+    setForm({ id: '', bar: '', comentario: '' });
   };
 
   return (

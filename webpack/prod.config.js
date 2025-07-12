@@ -51,6 +51,39 @@ module.exports = merge(webpackCommon, {
             }
           }
         ]
+      },
+      {
+        test: /\.(jpg|jpeg|png|gif)$/,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 4096, // 4kb for production
+          },
+        },
+        generator: {
+          filename: 'assets/images/[name].[hash:8][ext]',
+        },
+        use: [
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: process.env.NODE_ENV !== 'production',
+              mozjpeg: {
+                progressive: true,
+                quality: 75,
+              },
+              optipng: {
+                enabled: true,
+              },
+              pngquant: {
+                quality: [0.5, 0.75],
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+            },
+          },
+        ],
       }
     ]
   },

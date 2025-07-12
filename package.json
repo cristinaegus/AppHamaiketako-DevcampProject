@@ -8,6 +8,8 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress",
     "heroku-postbuild": "npm run build",
     "precommit": "eslint src",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
     "prod": "NODE_ENV=production node server.js",
     "server": "node server.js"
   },
@@ -33,12 +35,12 @@
   },
   "homepage": "https://github.com/bottega-code-school/js-builder",
   "dependencies": {
-    "ajv": "^6.12.6",
-    "autoprefixer": "^9.8.8",
-    "axios": "^1.8.3",
     "@babel/core": "^7.22.0",
     "@babel/preset-env": "^7.22.0",
     "@babel/preset-react": "^7.22.0",
+    "ajv": "^6.12.6",
+    "autoprefixer": "^9.8.8",
+    "axios": "^1.8.3",
     "babel-loader": "^8.3.0",
     "bootstrap": "^5.3.3",
     "clean-webpack-plugin": "^4.0.0",
@@ -73,14 +75,15 @@
   "devDependencies": {
     "@babel/plugin-transform-class-properties": "^7.22.0",
     "@babel/plugin-transform-object-rest-spread": "^7.22.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.57.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-react": "^7.34.0",
-    "mini-css-extract-plugin": "^2.7.0",
-    "css-minimizer-webpack-plugin": "^4.2.0",
-    "terser-webpack-plugin": "^5.3.0",
     "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-minimizer-webpack-plugin": "^4.2.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-webpack-plugin": "^5.0.2",
+    "image-webpack-loader": "^8.1.0",
+    "mini-css-extract-plugin": "^2.7.0",
+    "terser-webpack-plugin": "^5.3.0",
     "url-loader": "^4.1.1"
   }
 }

@@ -113,24 +113,51 @@ src/
 ```
 **Estado**: ✅ **COMPLETADO** - Compilación exitosa sin warnings.
 
-#### 2. **Mejoras en Estado y Datos**
+#### 6. **Mejoras en Estado y Datos**
 - **Implementar Context API** o **Zustand** para reemplazar Redux (overkill para este proyecto)
 - **LocalStorage/SessionStorage** para persistir datos del formulario
 - **React Query** para manejo avanzado de estado del servidor
 - **Validación con Formik + Yup** en formularios
 
-#### 3. **Performance y Optimización**
+#### 3. **✅ Performance y Optimización - COMPLETADO**
 ```javascript
-// Implementar lazy loading
+// ✅ Lazy loading implementado
 const Home = lazy(() => import('./pages/home'));
 const Rutas = lazy(() => import('./pages/rutas'));
 const Blog = lazy(() => import('./pages/blog'));
 
-// Memorización de componentes
+// ✅ Memorización de componentes aplicada
 const Navbar = memo(() => { /* componente */ });
-```
+const Footer = memo(() => { /* componente */ });
+const Tarjetas = memo(() => { /* componente */ });
 
-#### 4. **Mejoras de UX/UI**
+// ✅ Code splitting avanzado configurado
+// - Chunks separados para React, Redux, vendors
+// - Runtime chunk para mejor caching
+// - Assets optimizados por tipo
+
+// ✅ Optimización de imágenes
+// - Compresión automática en producción
+// - Lazy loading de imágenes grandes
+// - Formatos WebP para mejor compresión
+```
+**Estado**: ✅ **COMPLETADO** - Lazy loading, code splitting y memorización implementados.
+
+#### 4. **✅ SEO y Optimización Web - COMPLETADO**
+```html
+<!-- ✅ Meta tags SEO implementados -->
+<meta name="description" content="Hamaiketako Bilbao - La ruta imprescindible para ir de pintxos por Bilbao">
+<meta name="keywords" content="pintxos, Bilbao, gastronomía, bares, euskadi, hamaiketako">
+
+<!-- ✅ Preload de recursos críticos -->
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat" as="style">
+
+<!-- ✅ Lazy loading de fuentes -->
+<link rel="preload" href="..." as="style" onload="this.onload=null;this.rel='stylesheet'">
+```
+**Estado**: ✅ **COMPLETADO** - SEO básico y preload implementados.
+
+#### 5. **Mejoras de UX/UI**
 - **Dark mode** toggle
 - **Skeleton loaders** durante cargas
 - **Animaciones CSS** suaves con Framer Motion
@@ -143,7 +170,7 @@ const Navbar = memo(() => { /* componente */ });
 - **Alt texts** descriptivos en todas las imágenes
 - **Estructura semántica** HTML mejorada
 
-#### 6. **Testing y Calidad**
+#### 7. **Testing y Calidad**
 ```javascript
 // Testing suite propuesto
 "devDependencies": {
@@ -154,14 +181,14 @@ const Navbar = memo(() => { /* componente */ });
 }
 ```
 
-#### 7. **Backend y Datos**
+#### 8. **Backend y Datos**
 - **Base de datos real** (Firebase/Supabase)
 - **Autenticación** de usuarios
 - **Comentarios y ratings** por bar
 - **Upload de imágenes** de usuarios
 - **API propia** para gestión de rutas
 
-#### 8. **Funcionalidades Adicionales**
+#### 9. **Funcionalidades Adicionales**
 - **Mapa interactivo** con Leaflet/Google Maps
 - **Sistema de favoritos**
 - **Filtros avanzados** (precio, tipo cocina, horarios)

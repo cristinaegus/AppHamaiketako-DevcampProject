@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 const Tarjetas = ({
   imgSrc,
   imgAlt,
@@ -23,4 +23,4 @@ const Tarjetas = ({
   );
 };
 
-export default Tarjetas;
+export default memo(Tarjetas);

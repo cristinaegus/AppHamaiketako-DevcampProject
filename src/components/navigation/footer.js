@@ -1,9 +1,9 @@
 //creat un footer para todas las paginas
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Footer() {
+const Footer = () => {
     return (    
         <div className="footer">
             <div className="container"> 
@@ -17,4 +17,6 @@ export default function Footer() {
         </div> 
         </div> 
     );
-}       
+};
+
+export default memo(Footer);       

@@ -1,40 +1,61 @@
-import React from "react";
+import React from 'react';
 import Carousel from '../navigation/carousel';
 import Formulario from '../formulario';
 import Footer from '../navigation/footer';
 
+// Importaciones corregidas para las imágenes del carousel
 import foto1 from '../../../static/assets/images/gettyimages-Guggenheim.jpg';
 import foto2 from '../../../static/assets/images/gettyimages-plazanueva.jpg';
 import foto3 from '../../../static/assets/images/gettyimages-riabilbao.jpg';
+
+// Otras imágenes
 import antxoaTaberna from '../../../static/assets/images/antxoaTaberna.jpg';
 import barrapintxos from '../../../static/assets/images/gettyimages-barrapintxos.jpg';
 import champis from '../../../static/assets/images/gettyimages-champis.jpg';
 
 const Home = () => {
   const items = [
-    <div className="foto1" key="foto1"> 
+    <div key="foto1" style={{textAlign: 'center'}}> 
       <img 
         src={foto1}
-        alt="Guggenheim"
-        width={612}
-        height={407}
+        alt="Guggenheim Bilbao"
+        style={{
+          maxWidth: '100%',
+          maxHeight: '400px',
+          height: 'auto',
+          objectFit: 'cover',
+          borderRadius: '8px'
+        }}
       />
+      <h3 style={{marginTop: '10px', color: '#333'}}>Guggenheim Bilbao</h3>
     </div>,
-    <div className="foto2" key="foto2"> 
+    <div key="foto2" style={{textAlign: 'center'}}> 
       <img 
         src={foto2}
-        alt="Plaza Nueva"
-        width={612}
-        height={407}
+        alt="Plaza Nueva Bilbao"
+        style={{
+          maxWidth: '100%',
+          maxHeight: '400px',
+          height: 'auto',
+          objectFit: 'cover',
+          borderRadius: '8px'
+        }}
       />
+      <h3 style={{marginTop: '10px', color: '#333'}}>Plaza Nueva</h3>
     </div>,
-    <div className="foto3" key="foto3"> 
+    <div key="foto3" style={{textAlign: 'center'}}> 
       <img 
         src={foto3}
-        alt="Ria Bilbao"
-        width={612}
-        height={407}
+        alt="Ria de Bilbao"
+        style={{
+          maxWidth: '100%',
+          maxHeight: '400px',
+          height: 'auto',
+          objectFit: 'cover',
+          borderRadius: '8px'
+        }}
       />
+      <h3 style={{marginTop: '10px', color: '#333'}}>Ría de Bilbao</h3>
     </div>,
   ];
 

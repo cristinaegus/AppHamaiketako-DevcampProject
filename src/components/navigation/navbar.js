@@ -1,19 +1,19 @@
-import React, {useState,useEffect} from "react";
-import {Link} from "react-router-dom";
-import logo01 from "../../../static/assets/images/logo01.png";
+import React, {useState,useEffect, memo} from 'react';
+import {Link} from 'react-router-dom';
+import logo01 from '../../../static/assets/images/logo01.png';
 
 const Navbar = () => {
-    const [activeIndex, setActiveIndex] = useState(0)
-    const [isOpen, setIsOpen] = useState(false)
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
     
     useEffect(() => {
         // Actualiza el estado de la navbar cuando se pincha en un enlace
         const handleLinkClick = () => {
           setIsOpen(false);
         };
-        document.addEventListener("click", handleLinkClick);
+        document.addEventListener('click', handleLinkClick);
         return () => {
-          document.removeEventListener("click", handleLinkClick);
+          document.removeEventListener('click', handleLinkClick);
         };
     }, [isOpen]);
         
@@ -31,7 +31,7 @@ const Navbar = () => {
             <h1>Hamaiketako  BILBAO</h1>
             <h3>La ruta imprescindible para ir de pintxos</h3>
           </div>
-          <div className={`nav_items ${isOpen && "open"}`}>
+          <div className={`nav_items ${isOpen && 'open'}`}>
             <Link to="/" className={`nav-link ${activeIndex === 0 ? 'nav-link-active' : ''}`} onClick={() => setActiveIndex(0)}>
                 HOME
             </Link>
@@ -42,13 +42,13 @@ const Navbar = () => {
                 BLOG
             </Link>
           </div>
-          <div className={`nav_toggle ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
+          <div className={`nav_toggle ${isOpen && 'open'}`} onClick={() => setIsOpen(!isOpen)}>
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar;
+export default memo(Navbar);

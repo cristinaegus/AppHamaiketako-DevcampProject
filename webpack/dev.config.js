@@ -4,6 +4,7 @@ const webpackCommon = require('./common.config');
 
 // webpack plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const ESLintPlugin = require('eslint-webpack-plugin'); // Temporalmente desactivado
 
 module.exports = merge(webpackCommon, {
   devtool: 'inline-source-map',
@@ -36,7 +37,26 @@ module.exports = merge(webpackCommon, {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.(jpg|jpeg|png|gif)$/,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8192,
+          },
+        },
+        generator: {
+          filename: 'assets/images/[name][ext]', // Sin hash en desarrollo
+        },
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
+      },
     ]
   },
 
@@ -46,6 +66,17 @@ module.exports = merge(webpackCommon, {
       template: path.resolve(__dirname, '../static/index.html'),
       favicon: path.resolve(__dirname, '../static/favicon.ico')
     })
+    // ESLint temporalmente desactivado por incompatibilidad con ESLint 8
+    // TODO: Reactivar cuando se actualice eslint-webpack-plugin
+    /*
+    new ESLintPlugin({
+      extensions: ['js', 'jsx'],
+      exclude: 'node_modules',
+      emitWarning: true,
+      failOnError: false,
+      eslintPath: 'eslint/use-at-your-own-risk'
+    })
+    */
   ],
 
   devServer: {
