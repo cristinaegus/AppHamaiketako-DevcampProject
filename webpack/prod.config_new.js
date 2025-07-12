@@ -4,6 +4,7 @@ const webpackCommon = require("./common.config");
 
 // webpack plugins
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const DefinePlugin = require("webpack/lib/DefinePlugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -100,6 +101,11 @@ module.exports = merge(webpackCommon, {
           }
         }
       ]
+    }),
+    new DefinePlugin({
+      "process.env": {
+        NODE_ENV: '"production"'
+      }
     }),
     new MiniCssExtractPlugin({
       filename: "[name]-[contenthash].min.css",

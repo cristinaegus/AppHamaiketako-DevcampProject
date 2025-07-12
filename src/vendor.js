@@ -2,6 +2,5 @@
 
 // polyfills and vendors
 
-if (!window._babelPolyfill) {
-  require('babel-polyfill');
-}
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';

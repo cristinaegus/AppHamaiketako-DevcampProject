@@ -32,13 +32,13 @@ const Navbar = () => {
             <h3>La ruta imprescindible para ir de pintxos</h3>
           </div>
           <div className={`nav_items ${isOpen && "open"}`}>
-            <Link exact="true" to="/" activeclassname="nav-link-active" onClick={() => setActiveIndex(0)}>
+            <Link to="/" className={`nav-link ${activeIndex === 0 ? 'nav-link-active' : ''}`} onClick={() => setActiveIndex(0)}>
                 HOME
             </Link>
-            <Link to="/rutas" activeclassname="nav-link-active" onClick={() => setActiveIndex(1)}>
+            <Link to="/rutas" className={`nav-link ${activeIndex === 1 ? 'nav-link-active' : ''}`} onClick={() => setActiveIndex(1)}>
                 RUTAS
             </Link>
-            <Link to="/blog" activeclassname="nav-link-active" onClick={() => setActiveIndex(2)}>
+            <Link to="/blog" className={`nav-link ${activeIndex === 2 ? 'nav-link-active' : ''}`} onClick={() => setActiveIndex(2)}>
                 BLOG
             </Link>
           </div>
